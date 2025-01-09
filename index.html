@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هناء | قصتي</title>
+    <style>
+        :root {
+            --primary-color: #ff748c;
+            --secondary-color: #fff0f5;
+            --accent-color: #ff9eaf;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            animation: fadeIn 1.5s ease-in;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .profile-img {
+            width: 350px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.02) rotate(2deg);
+        }
+
+        .about-me {
+            max-width: 600px;
+            text-align: right;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .about-me:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-me h2 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05) translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        h2.gallery-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin: 40px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                padding: 20px;
+            }
+            
+            .profile-img {
+                width: 280px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .about-me {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>هنو الكيوت</h1>
+    </header>
+
+    <div class="container">
+        <section class="profile-section">
+            <img src="39f7a96591afe3e67e91c0c659b8a642.jpg" alt="هناء" class="profile-img">
+            <div class="about-me">
+                <h2>قصتي</h2>
+                <p>مرحباً! أنا هناء، فتاة تحب القهوة و الفن والإبداع. أعشق الرسم والتصميم وكل ما هو جميل في هذه الحياة. أؤمن بأن لكل شخص قصة فريدة تستحق أن تُروى.</p>
+                <p>أحب مشاركة تجاربي وإلهام الآخرين من خلال فني وإبداعي. دائماً ما أسعى للتطور والتعلم من تجارب الحياة المختلفة.</p>
+            
+            </div>
+        </section>
+
+        <h2 class="gallery-title">احب صور الانمي</h2>
+        <div class="gallery">
+            <img src="37a4bf61e3ff8724cbd0516713c76cdf.jpg" alt="صورة انمي 1">
+            <img src="6cddc6e0960b71f641d5b75b2aadb6eb.jpg" alt="صورة انمي 2">
+        </div>
+    </div>
+
+</body>
+</html>
